@@ -1,0 +1,13 @@
+class Solution:
+    def addToArrayForm(self, num: List[int], k: int) -> List[int]:
+        carry = k
+        for idx in range(len(num)-1,-1,-1):
+            cur = (num[idx] + carry) % 10
+            carry = (num[idx] + carry) // 10
+            num[idx] = cur
+        while(carry):
+            cur = carry % 10
+            num = [cur] + num
+            carry = carry//10
+            
+        return num
