@@ -1,0 +1,16 @@
+class Solution:
+    def subsetXORSum(self, nums: List[int]) -> int:
+        xorsum = 0
+        def subsetposs(idx,xor):
+            nonlocal xorsum
+            if idx == len(nums):
+                if xor != -1:
+                    xorsum += xor
+                return 
+            if xor == -1:
+                subsetposs(idx+1,nums[idx])
+            else:
+                subsetposs(idx+1,xor^nums[idx])
+            subsetposs(idx+1,xor)
+        subsetposs(0,-1)
+        return xorsum
