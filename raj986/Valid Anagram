@@ -1,0 +1,20 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        mps = {}
+        mpt = {}
+        for c in s:
+            if c in mps:
+                mps[c] += 1
+            else:
+                mps[c] =  1
+        for c in t:
+            if c in mpt:
+                mpt[c] += 1
+            else:
+                mpt[c] = 1
+        for key in mps.keys():
+            if key not in mpt or mps[key] != mpt[key]:
+                return False
+        return True
