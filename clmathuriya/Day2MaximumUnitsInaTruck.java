@@ -1,5 +1,5 @@
 class Solution {
-    //1. sort array number of elements in each box 
+    //1. sort array by the number of elements in each box 
     //2. keep adding boxes till the capacity is available
     //Compelxity : O(nlogn) 
     public int maximumUnits(int[][] boxTypes, int truckSize) {
