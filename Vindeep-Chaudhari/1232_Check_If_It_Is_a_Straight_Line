@@ -6,7 +6,7 @@ class Solution {
 public:
     bool checkStraightLine(vector<vector<int>>& coordinates) {
         if(coordinates.size() == 2) return true;
-        
+
         auto pointOne = coordinates[0];
         auto pointTwo = coordinates[1];
         
@@ -19,7 +19,6 @@ public:
             if(dy * (pointOne[0] - point[0]) != dx * (pointOne[1] - point[1])) {
                 return false;
             }
-        
         }
         
         return true;
@@ -27,4 +26,4 @@ public:
 };
 
 // Time Complexity - O(n)
-// Spcae Complexity - 
+// Spcae Complexity - O(1)
