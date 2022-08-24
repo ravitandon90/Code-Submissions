@@ -3,6 +3,7 @@ public:
     ListNode* mergeTwoLists(ListNode* a, ListNode* b) {
         ListNode *dummy = new ListNode(0);
         ListNode *temp = dummy;
+        
         while(a && b){
             if(a->val < b->val) {
                 temp->next = a;
