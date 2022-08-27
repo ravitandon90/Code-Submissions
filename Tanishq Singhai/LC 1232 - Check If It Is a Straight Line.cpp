@@ -14,7 +14,7 @@ public:
             int slopeX = coordinates[i][0] - coordinates[0][0];
             int slopeY = coordinates[i][1] - coordinates[0][1];
                         
-            // slope for any 2 points on a straight line, must remain same
+            // slope for any 2 points on a straight line must remain same
             // dy/dx = slopeY/slopeX
             // dy * slopeX == slopeY * dx            
             if( slopeX * dy != slopeY * dx) 
