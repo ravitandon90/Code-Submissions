@@ -20,6 +20,7 @@ Level : Easy
  * @param {number} high
  * @return {number}
  */
+// solution 1
 var rangeSumBST = function(root, low, high) {
     let add = 0;
     
@@ -36,4 +37,18 @@ var rangeSumBST = function(root, low, high) {
     
     BST(root,low,high);
     return add;
+};
+
+// solution 2
+var rangeSumBST = function(root, low, high) {
+    let left = 0, right = 0;
+    
+    if(root == null){
+        return 0;
+    }
+    
+    left = rangeSumBST(root.left,low,high);
+    right = rangeSumBST(root.right,low,high);
+    
+    return left + right + (root.val >= low && root.val <= high ? root.val : 0);
 };
