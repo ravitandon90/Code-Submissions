@@ -52,3 +52,21 @@ var rangeSumBST = function(root, low, high) {
     
     return left + right + (root.val >= low && root.val <= high ? root.val : 0);
 };
+
+// solution 3
+var rangeSumBST = function(root, low, high) {
+    let left = 0, right = 0 ;
+    
+    if(root == null){
+        return 0;
+    }
+    if(root.val > low ){
+         left = rangeSumBST(root.left,low,high);
+    }
+        console.log(root.val);
+
+    if(root.val < high){
+        right = rangeSumBST(root.right,low,high);    
+    }
+    return left + right + (root.val >= low && root.val <= high ? root.val : 0);
+};
