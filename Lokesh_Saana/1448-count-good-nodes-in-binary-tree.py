@@ -1,25 +1,22 @@
-# https://leetcode.com/problems/range-sum-query-mutable/
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def goodNodes(self, root: TreeNode) -> int:
 
-import numpy as np
+        def dfs(node, mxv):
+            if not node:
+                return 0
 
+            res = 1 if node.val >= mxv else 0
 
-class NumArray:
+            mxv = max(node.val, mxv)
 
-    def __init__(self, nums: List[int]):
-        self.nums = np.array([0]+nums)
-        self.x = np.zeros(len(nums)+1, dtype=int)
-        for i in range(1, len(self.nums)):
-            self.x[i] = self.nums[i]+self.x[i-1]
+            res += dfs(node.left, mxv)
+            res += dfs(node.right, mxv)
+            return res
 
-    def update(self, index: int, val: int) -> None:
-        self.x[index+1:] -= (self.nums[index+1] - val)
-        self.nums[index+1] = val
-
-    def sumRange(self, left: int, right: int) -> int:
-        return self.x[right+1] - self.x[left]
-
-
-# Your NumArray object will be instantiated and called as such:
-# obj = NumArray(nums)
-# obj.update(index,val)
-# param_2 = obj.sumRange(left,right)
+        return dfs(root, root.val)
