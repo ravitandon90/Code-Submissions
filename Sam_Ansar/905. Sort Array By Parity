@@ -1,0 +1,28 @@
+class Solution(object):
+    def sortArrayByParity(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+
+        out=[i for i in nums]
+        st=0
+        end=len(nums)-1
+        e_ptr=end
+        for i in nums:
+            if i%2==0:
+                out[st]=i
+                st=st+1
+            elif i%2!=0:
+                out[end]=out[e_ptr]
+                out[e_ptr]=i
+                end=end-1
+        return out
+
+
+        """ Alternate Soln
+        even=[i for i in nums if i%2==0]
+        odd=[i for i in nums if i%2!=0]
+        even.extend(odd)
+        return even
+        """
