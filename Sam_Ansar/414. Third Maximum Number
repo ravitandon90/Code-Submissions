@@ -1,0 +1,14 @@
+def thirdMax(nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        l1=list(set(nums))
+        if len(l1)<3:
+            return max(nums)
+        else:
+            l1.sort()
+            max_3=l1[-3]
+            return max_3
+inp=[int(i) for i in input().split(',')]
+print(thirdMax(inp))
