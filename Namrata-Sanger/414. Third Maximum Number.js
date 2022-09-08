@@ -1,5 +1,5 @@
 /*
-Day 20
+Day 21
 414. Third Maximum Number
 Link: https://leetcode.com/problems/third-maximum-number/
 Level: Easy 
