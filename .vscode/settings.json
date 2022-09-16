@@ -4,6 +4,8 @@
     "bitset": "cpp",
     "set": "cpp",
     "string": "cpp",
-    "string_view": "cpp"
+    "string_view": "cpp",
+    "filesystem": "cpp",
+    "iosfwd": "cpp"
   }
 }
