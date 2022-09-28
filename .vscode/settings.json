@@ -6,6 +6,8 @@
     "string": "cpp",
     "string_view": "cpp",
     "filesystem": "cpp",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "vector": "cpp",
+    "iterator": "cpp"
   }
 }
