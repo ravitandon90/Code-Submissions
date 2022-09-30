@@ -1,4 +1,4 @@
-def divisorGame(self, N: int) -> bool:
+def divisorGame(N: int) -> bool:
         bool_arr = [False for i in range(N + 1)] 
         bool_arr[0] = True
         for i in range(1, N + 1):
