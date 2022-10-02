@@ -1,4 +1,4 @@
-def twoEggDrop(self, n):
+def twoEggDrop(n):
     @lru_cache(None)
     def dp(n, x):
         if x == 1 or n <= 1:
