@@ -12,7 +12,6 @@ public:
             maxi = max(maxi, arr[i]);
         }
         
-        
         return maxi;
     }
 };
