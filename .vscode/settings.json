@@ -8,6 +8,9 @@
     "filesystem": "cpp",
     "iosfwd": "cpp",
     "vector": "cpp",
-    "iterator": "cpp"
+    "iterator": "cpp",
+    "__locale": "cpp",
+    "__string": "cpp",
+    "regex": "cpp"
   }
 }
