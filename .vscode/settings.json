@@ -11,6 +11,11 @@
     "iterator": "cpp",
     "__locale": "cpp",
     "__string": "cpp",
-    "regex": "cpp"
+    "regex": "cpp",
+    "algorithm": "cpp",
+    "chrono": "cpp",
+    "limits": "cpp",
+    "random": "cpp",
+    "valarray": "cpp"
   }
 }
