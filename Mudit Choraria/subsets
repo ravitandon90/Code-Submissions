@@ -1,0 +1,17 @@
+class Solution {
+public:
+    vector<vector<int>> ans{{}};
+    void backtrack(int j, vector<int>& nums, vector<int>& sub) {
+        for(int i = j; i < nums.size(); i++) {
+            sub.push_back(nums[i]);
+            ans.push_back(sub);
+            backtrack(i + 1, nums, sub);
+            sub.pop_back();
+        }
+    }
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<int> sub;
+        backtrack(0, nums, sub);
+        return ans;
+    }
+};
