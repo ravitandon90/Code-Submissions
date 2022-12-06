@@ -16,6 +16,8 @@
     "chrono": "cpp",
     "limits": "cpp",
     "random": "cpp",
-    "valarray": "cpp"
+    "valarray": "cpp",
+    "queue": "cpp",
+    "stack": "cpp"
   }
 }
